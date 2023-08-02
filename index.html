@@ -57,24 +57,26 @@
 
 			let template = '';
 
-			if( url && file_1 && file_2 ) {
+			let allIsFilled = url && file_1 && file_2
+
+			if( allIsFilled ) {
 				let leftStyle = `
 					<style>
 						.adaurum-sidebanner {
 							position: fixed;
 							top: 50%;
 							transform: translate(0, -50%);
-							right: 0;
+							left: 0;
 							z-index: 10;
 						}
 
 						.adaurum-sidebanner.adaurum-left {
-							right: 0;
-							left: auto;
+							left: 0;
+							right: auto;
 						}
 
 						.adaurum-sidebanner img.adaurum-image_2 {
-							right: 0;let 
+							left: 0; 
 							z-index: 100;
 							top: 0;
 							display: none;
@@ -83,8 +85,8 @@
 						}
 
 						.adaurum-sidebanner.adaurum-left img.adaurum-image_2 {
-							left: auto;
-							right: 0;
+							right: auto;
+							left: 0;
 						}
 
 						.adaurum-sidebanner:hover img.adaurum-image_2 {
